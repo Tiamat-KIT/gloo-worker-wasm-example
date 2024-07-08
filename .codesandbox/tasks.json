@@ -4,11 +4,6 @@
 
   // These tasks can be run from CodeSandbox. Running one will open a log in the app.
   "tasks": {
-    "cargo watch -x run": {
-      "name": "cargo watch -x run",
-      "command": "cargo watch -x run",
-      "runAtStart": true
-    },
     "rustup target add wasm32-unknown-unknown": {
       "name": "rustup target add wasm32-unknown-unknown",
       "command": "rustup target add wasm32-unknown-unknown",
@@ -23,8 +18,10 @@
       "name": "curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh",
       "command": "curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh",
       "runAtStart": true
+    },"wasm-pack build --out-dir worker-module --target web": {
+      "name": "wasm-pack build --out-dir worker-module --target web",
+      "command": "wasm-pack build --out-dir worker-module --target web",
+      "runAtStart": true
     }
-
-
   }
 }
