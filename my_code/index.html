@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link data-trunk rel="rust" data-wasm-opt="z" /> -->
+    <title>Document</title>
+    <script type="module">
+      import init from "./pkg/wasm_worker_gloo.js"
+      init().then(res => {
+        console.log(res)
+        console.log(res.square_worker(2))
+      })
+    </script>
+  </head>
+  <body>
+    <h1>WebAssembly Tester</h1>
+  </body>
+</html>
