@@ -1,6 +1,6 @@
 {
   // These tasks will run in order when initializing your CodeSandbox project.
-  "setupTasks": ["rustup target add wasm32-unknown-unknown","apt-get install gcc","curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh"],
+  "setupTasks": [],
 
   // These tasks can be run from CodeSandbox. Running one will open a log in the app.
   "tasks": {
@@ -8,6 +8,23 @@
       "name": "cargo watch -x run",
       "command": "cargo watch -x run",
       "runAtStart": true
+    },
+    "rustup target add wasm32-unknown-unknown": {
+      "name": "rustup target add wasm32-unknown-unknown",
+      "command": "rustup target add wasm32-unknown-unknown",
+      "runAtStart": true
+    },
+    "apt-get install gcc": {
+      "name": "apt-get install gcc",
+      "command": "apt-get install gcc",
+      "runAtStart": true
+    },
+    "curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh": {
+      "name": "curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh",
+      "command": "curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh",
+      "runAtStart": true
     }
+
+
   }
 }
